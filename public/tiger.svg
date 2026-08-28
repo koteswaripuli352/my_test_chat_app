@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Ears -->
+  <path d="M90,170 L200,40 L230,190 Z" fill="#111111"/>
+  <path d="M422,170 L312,40 L282,190 Z" fill="#111111"/>
+  <path d="M120,165 L205,80 L215,175 Z" fill="#F5A623"/>
+  <path d="M392,165 L307,80 L297,175 Z" fill="#F5A623"/>
+
+  <!-- Head -->
+  <ellipse cx="256" cy="290" rx="200" ry="175" fill="#F5A623"/>
+
+  <!-- Forehead stripes -->
+  <path d="M256,110 Q244,175 256,235 Q268,175 256,110 Z" fill="#111111"/>
+  <path d="M205,125 Q188,185 210,240 Q222,185 205,125 Z" fill="#111111"/>
+  <path d="M307,125 Q324,185 302,240 Q290,185 307,125 Z" fill="#111111"/>
+
+  <!-- Eyebrow stripes -->
+  <path d="M140,210 Q190,180 240,215 Q195,228 140,210 Z" fill="#111111"/>
+  <path d="M372,210 Q322,180 272,215 Q317,228 372,210 Z" fill="#111111"/>
+
+  <!-- Cheek stripes -->
+  <path d="M55,255 Q108,250 150,272 Q104,288 55,255 Z" fill="#111111"/>
+  <path d="M45,318 Q102,308 145,334 Q98,346 45,318 Z" fill="#111111"/>
+  <path d="M457,255 Q404,250 362,272 Q408,288 457,255 Z" fill="#111111"/>
+  <path d="M467,318 Q410,308 367,334 Q414,346 467,318 Z" fill="#111111"/>
+
+  <!-- Muzzle -->
+  <path d="M160,320 Q256,262 352,320 Q330,430 256,445 Q182,430 160,320 Z" fill="#FFE8B8"/>
+
+  <!-- Eyes -->
+  <ellipse cx="190" cy="262" rx="36" ry="26" fill="#FFE8B8"/>
+  <ellipse cx="322" cy="262" rx="36" ry="26" fill="#FFE8B8"/>
+  <circle cx="196" cy="264" r="13" fill="#111111"/>
+  <circle cx="316" cy="264" r="13" fill="#111111"/>
+  <circle cx="200" cy="258" r="4" fill="#FFE8B8"/>
+  <circle cx="312" cy="258" r="4" fill="#FFE8B8"/>
+
+  <!-- Nose -->
+  <path d="M236,340 Q256,324 276,340 Q267,366 256,372 Q245,366 236,340 Z" fill="#111111"/>
+
+  <!-- Mouth -->
+  <path d="M256,372 L256,398 M256,398 Q222,422 192,406 M256,398 Q290,422 320,406" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Whisker dots -->
+  <circle cx="150" cy="352" r="4" fill="#111111"/>
+  <circle cx="138" cy="376" r="4" fill="#111111"/>
+  <circle cx="155" cy="398" r="4" fill="#111111"/>
+  <circle cx="362" cy="352" r="4" fill="#111111"/>
+  <circle cx="374" cy="376" r="4" fill="#111111"/>
+  <circle cx="357" cy="398" r="4" fill="#111111"/>
+</svg>

@@ -1,11 +1,13 @@
 import { GoogleGenAI } from "@google/genai";
 import { NextRequest, NextResponse } from "next/server";
+import { DEFAULT_GEMINI_MODEL, isKnownGeminiModel } from "../../lib/models";
 
 export const runtime = "nodejs";
 
 export async function POST(request: NextRequest) {
   try {
-    const { messages } = await request.json();
+    const { messages, model } = await request.json();
+    const selectedModel = isKnownGeminiModel(model) ? model : DEFAULT_GEMINI_MODEL;
 
     const apiKey = process.env.GOOGLE_GENAI_API_KEY;
     if (!apiKey) {
@@ -26,7 +28,7 @@ export async function POST(request: NextRequest) {
     );
 
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: selectedModel,
       contents,
     });
 

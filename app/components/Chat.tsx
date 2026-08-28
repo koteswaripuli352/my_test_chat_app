@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Menu, Plus, MessageCircle, Settings, HelpCircle } from "lucide-react";
+import { GEMINI_MODELS, DEFAULT_GEMINI_MODEL } from "../lib/models";
 
 interface Message {
   role: "user" | "assistant";
@@ -20,6 +21,7 @@ export default function Chat() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [model, setModel] = useState(DEFAULT_GEMINI_MODEL);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const currentConv = conversations.find((c) => c.id === currentConvId);
@@ -67,6 +69,7 @@ export default function Chat() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           messages: [...messages, userMessage],
+          model,
         }),
       });
 
@@ -186,13 +189,35 @@ export default function Chat() {
                 <Menu size={20} className="text-gray-700" />
               </button>
               <h1 className="text-2xl font-semibold text-gray-900">My Gemini App</h1>
+              <select
+                value={model}
+                onChange={(e) => setModel(e.target.value)}
+                aria-label="Select model"
+                className="px-3 py-1.5 text-sm border border-gray-300 rounded-full bg-white text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              >
+                {GEMINI_MODELS.map((m) => (
+                  <option key={m.id} value={m.id}>
+                    {m.label}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto">
-          <div className="max-w-4xl mx-auto w-full px-4 py-8">
+        <div className="relative flex-1 overflow-y-auto">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-0 bg-[url('/forest.svg')] bg-cover bg-bottom bg-no-repeat opacity-25"
+          />
+          <img
+            src="/tiger.svg"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 bottom-0 z-0 mx-auto h-72 w-72 max-w-none select-none opacity-30"
+          />
+          <div className="relative z-10 max-w-4xl mx-auto w-full px-4 py-8">
             {messages.length === 0 && (
               <div className="flex flex-col items-center justify-center h-full min-h-[400px]">
                 <h2 className="text-3xl font-semibold text-gray-900 mb-2">Hello there</h2>

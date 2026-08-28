@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
+  <!-- Back layer: distant rounded trees -->
+  <g fill="#8FBF7A">
+    <circle cx="40" cy="215" r="62"/>
+    <circle cx="170" cy="210" r="70"/>
+    <circle cx="300" cy="220" r="58"/>
+    <circle cx="430" cy="208" r="72"/>
+    <circle cx="560" cy="218" r="60"/>
+    <circle cx="690" cy="212" r="68"/>
+    <circle cx="820" cy="216" r="64"/>
+  </g>
+
+  <!-- Front layer: pine trees -->
+  <g>
+    <polygon points="-10,300 50,300 20,135" fill="#2F5233"/>
+    <rect x="11" y="300" width="18" height="22" fill="#4A3222"/>
+
+    <polygon points="65,300 195,300 130,115" fill="#2F5233"/>
+    <rect x="121" y="300" width="18" height="22" fill="#4A3222"/>
+
+    <polygon points="212,300 328,300 270,145" fill="#2F5233"/>
+    <rect x="261" y="300" width="18" height="22" fill="#4A3222"/>
+
+    <polygon points="340,300 480,300 410,105" fill="#2F5233"/>
+    <rect x="401" y="300" width="18" height="22" fill="#4A3222"/>
+
+    <polygon points="490,300 610,300 550,130" fill="#2F5233"/>
+    <rect x="541" y="300" width="18" height="22" fill="#4A3222"/>
+
+    <polygon points="624,300 756,300 690,120" fill="#2F5233"/>
+    <rect x="681" y="300" width="18" height="22" fill="#4A3222"/>
+
+    <polygon points="768,300 892,300 830,140" fill="#2F5233"/>
+    <rect x="821" y="300" width="18" height="22" fill="#4A3222"/>
+
+    <polygon points="855,300 955,300 910,150" fill="#2F5233"/>
+    <rect x="901" y="300" width="18" height="22" fill="#4A3222"/>
+  </g>
+</svg>
